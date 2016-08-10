@@ -4,6 +4,7 @@ import com.sun.tools.javac.util.List;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 public class Main {
     public String name = "Ben";
@@ -14,14 +15,51 @@ public class Main {
 //        System.out.println(isPalindrome("A Santa at Nasa"));
 //        System.out.println(isPalindrome("Avid Diva"));
 //        System.out.println(isPalindrome("Tub"));
+//
+//        int[] numbers = divisibles(new int[] { 10, 4, 18, 36, 45, 54, 63 }, new int[] { 9, 2 });
+//
+//        for(int i : numbers) {
+//            System.out.println(i);
+//        }
 
-
-        int[] numbers = divisibles(new int[] { 10, 4, 18, 36, 45, 54, 63 }, new int[] { 9, 2 });
-
-        for(int i : numbers) {
-            System.out.println(i);
-        }
+        System.out.println(titleCase("i am A little TEAPOT"));
     }
+
+    public static String titleCase(String input) {
+        input = input.toLowerCase();
+
+        String[] words = input.split(" ");
+
+        for (int i = 0;i < words.length;i++) {
+            String currentWord = words[i];
+
+            words[i] =
+                currentWord.substring(0, 1).toUpperCase() +
+                currentWord.substring(1);
+        }
+
+        return String.join(" ", words);
+    }
+
+
+
+//    public static String titleCase(String input) {
+//        input = input.toLowerCase();
+//        String result = "";
+//        String[] words = input.split(" ");
+//
+//        for (int i = 0;i < words.length;i++) {
+//            String currentWord = words[i];
+//            currentWord = currentWord.substring(0, 1).toUpperCase() + currentWord.substring(1);
+//            result += currentWord;
+//
+//            if (i < words.length - 1) {
+//                result += " ";
+//            }
+//        }
+//
+//        return result;
+//    }
 
     public static int[] divisibles(int[] numbers, int[] divisors) {
         int divisor = Arrays.stream(divisors).reduce(1, (i, j) -> i * j);
