@@ -10,19 +10,39 @@ public class Main {
     public String name = "Ben";
 
     public static void main(String[] args) {
-	    // write your code here
-//
-//        System.out.println(isPalindrome("A Santa at Nasa"));
-//        System.out.println(isPalindrome("Avid Diva"));
-//        System.out.println(isPalindrome("Tub"));
-//
-//        int[] numbers = divisibles(new int[] { 10, 4, 18, 36, 45, 54, 63 }, new int[] { 9, 2 });
-//
-//        for(int i : numbers) {
-//            System.out.println(i);
-//        }
+    }
 
-        System.out.println(titleCase("i am A little TEAPOT"));
+    public static int gimme(int[] numbers) {
+        // Math.random() returns a pseudo-random double between .00 and .99,
+        // if you multiply it by the max number possible, you get basically
+        // a random number from 0-max number.
+
+
+        int idx = (int)(Math.random() * numbers.length);
+        int otherIdxForExample = (int)Math.floor(Math.random() * numbers.length);
+
+        return numbers[idx];
+    }
+
+    public static boolean balanced(String input, char letter) {
+        char[] chars = input.toCharArray();
+
+        int matches = 0;
+        int notMatches = 0;
+
+        for (int i = 0;i < chars.length;i++) {
+            if (chars[i] == letter) {
+                matches++;
+            } else {
+                notMatches++;
+            }
+        }
+
+        return matches == notMatches;
+    }
+
+    public static boolean balancedStreams(String input, char letter) {
+
     }
 
     public static String titleCase(String input) {
