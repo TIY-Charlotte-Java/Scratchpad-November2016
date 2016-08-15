@@ -26,4 +26,12 @@ public class MainTest {
         assertFalse(Main.balanced("creek", 'e'));
     }
 
+    @Test
+    public void longxReturnsLongestStringOfXs() {
+        assertEquals(Main.longx("asdxxxxf"), 4);
+        assertEquals(Main.longx("xa"), 1);
+        assertEquals(Main.longx("xpxpxpxpxp"), 1);
+        assertEquals(Main.longx("xxpxxxxxp"), 5);
+    }
+
 }

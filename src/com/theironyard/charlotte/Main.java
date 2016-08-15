@@ -12,6 +12,36 @@ public class Main {
     public static void main(String[] args) {
     }
 
+    public static int longx(String input) {
+        // the longest run we've seen
+        int longestRun = 0;
+
+        // the current run
+        int run = 0;
+
+        // for each character..
+        for (int i = 0;i < input.length();i++) {
+            // if it's an x, add one to the current run
+
+            if (input.charAt(i) == 'x') {
+                run++;
+
+                // there's a chance that this run
+                // is longer than any we've seen so far
+                // so check for that
+                if (run > longestRun) {
+                    longestRun = run;
+                }
+            } else {
+                // if it's not an x, we're not in a run
+                // anymore, so reset our run variable
+                run = 0;
+            }
+        }
+
+        return longestRun;
+    }
+
     public static int gimme(int[] numbers) {
         // Math.random() returns a pseudo-random double between .00 and .99,
         // if you multiply it by the max number possible, you get basically
@@ -41,9 +71,6 @@ public class Main {
         return matches == notMatches;
     }
 
-    public static boolean balancedStreams(String input, char letter) {
-
-    }
 
     public static String titleCase(String input) {
         input = input.toLowerCase();
