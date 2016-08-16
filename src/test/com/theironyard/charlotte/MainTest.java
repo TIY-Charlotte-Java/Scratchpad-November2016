@@ -34,4 +34,18 @@ public class MainTest {
         assertEquals(Main.longx("xxpxxxxxp"), 5);
     }
 
+    @Test
+    public void capitalizedReturnsNumberOfCapitalLettersInStrings() {
+        assertEquals(Main.capitalized("Bass Hunter"), 2);
+        assertEquals(Main.capitalized("ABCDEfghi"), 5);
+        assertEquals(Main.capitalized("Mon Tues Wed"), 3);
+    }
+
+    @Test
+    public void capitalizedStreamsReturnsNumberOfCapitalLettersInStrings() {
+        assertEquals(Main.capitalizedStreams("Bass Hunter"), 2);
+        assertEquals(Main.capitalizedStreams("ABCDEfghi"), 5);
+        assertEquals(Main.capitalizedStreams("Mon Tues Wed"), 3);
+    }
+
 }

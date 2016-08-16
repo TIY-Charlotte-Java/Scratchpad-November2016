@@ -12,6 +12,33 @@ public class Main {
     public static void main(String[] args) {
     }
 
+    public static int capitalizedStreams(String input) {
+        return (int)(input.chars().map(c -> (char) c).filter(Character::isUpperCase).count());
+    }
+
+
+    public static int capitalized(String input) {
+        int capitalizedLetters = 0;
+
+        // one way to write for loops,
+        // and is the same as other languages
+        for (int i = 0;i < input.length();i++) {
+            char c = input.charAt(i);
+
+
+        }
+
+        // java gives you this one as kind of a helper
+        // because people did this so much.
+        for (char c : input.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                capitalizedLetters++;
+            }
+        }
+
+        return capitalizedLetters;
+    }
+
     public static int longx(String input) {
         // the longest run we've seen
         int longestRun = 0;
@@ -41,6 +68,7 @@ public class Main {
 
         return longestRun;
     }
+
 
     public static int gimme(int[] numbers) {
         // Math.random() returns a pseudo-random double between .00 and .99,
@@ -87,8 +115,6 @@ public class Main {
 
         return String.join(" ", words);
     }
-
-
 
 //    public static String titleCase(String input) {
 //        input = input.toLowerCase();
