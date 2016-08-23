@@ -5,11 +5,94 @@ import com.sun.tools.javac.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 public class Main {
     public String name = "Ben";
 
     public static void main(String[] args) {
+    }
+
+    public static Color simpleBlend(Color[] colors) {
+        int redSum = 0;
+        int greenSum = 0;
+        int blueSum = 0;
+
+        for (Color c : colors) {
+            redSum += c.getRed();
+            greenSum += c.getGreen();
+            blueSum += c.getBlue();
+        }
+
+        return new Color(redSum / colors.length, greenSum / colors.length, blueSum / colors.length);
+    }
+
+    public static Color blend(Color[] colors) {
+        double reds = Arrays.stream(colors).collect(Collectors.averagingInt(Color::getRed));
+        double greens = Arrays.stream(colors).collect(Collectors.averagingInt(Color::getGreen));
+        double blues = Arrays.stream(colors).collect(Collectors.averagingInt(Color::getBlue));
+
+        return new Color((int)reds, (int)greens, (int)blues);
+    }
+
+    public static boolean unsortedOther(int[] first, int[] second) {
+        if (first.length != second.length) {
+            return false;
+        }
+
+        for (int firstNumber : first) {
+            boolean found = false;
+
+            for (int secondNumber : second) {
+                if (firstNumber == secondNumber) {
+                    found = true;
+                }
+            }
+
+            if (found) {
+                continue;
+            } else {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+
+    public static boolean unsorted(int[] first, int[] second) {
+        if (first.length != second.length) {
+            return false;
+        }
+
+        Arrays.sort(first);
+        Arrays.sort(second);
+
+
+        for (int i = 0;i < first.length;i++) {
+            if (first[i] != second[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean sleepIn(boolean isWeekDay, boolean isOnVacation) {
+        return !isWeekDay || isOnVacation;
+    }
+
+    public static int silver(int[] numbers) {
+        int largest = Integer.MIN_VALUE, secondLargest = Integer.MIN_VALUE;
+
+        for (int number : numbers) {
+            if (number > largest) {
+                secondLargest = largest;
+                largest = number;
+            }
+        }
+
+        return secondLargest;
     }
 
     public static int capitalizedStreams(String input) {
