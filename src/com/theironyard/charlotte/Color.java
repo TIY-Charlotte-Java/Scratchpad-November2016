@@ -1,5 +1,7 @@
 package com.theironyard.charlotte;
 
+import java.util.ArrayList;
+
 /**
  * Created by Ben on 8/23/16.
  */
@@ -7,11 +9,21 @@ public class Color {
     private int red;
     private int green;
     private int blue;
+    private String colorName;
 
     public Color(int red, int green, int blue) {
         this.red = red;
         this.green = green;
         this.blue = blue;
+    }
+
+
+    public String getColorName() {
+        return colorName;
+    }
+
+    public void setColorName(String colorName) {
+        this.colorName = colorName;
     }
 
     public int getRed() {

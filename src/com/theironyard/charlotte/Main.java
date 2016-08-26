@@ -1,16 +1,142 @@
 package com.theironyard.charlotte;
 
-import com.sun.tools.javac.util.List;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
+import java.util.HashMap;
 import java.util.stream.Collectors;
 
 public class Main {
     public String name = "Ben";
 
     public static void main(String[] args) {
+        int[] numbers;
+
+        numbers = new int[10];
+        numbers = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+        Object[] objects;
+
+        objects = new Object[10];
+        objects = new Object[] { new Object() };
+
+        ArrayList<Integer> arrayListNumbers;
+
+        arrayListNumbers = new ArrayList<>();
+        arrayListNumbers.add(1);
+        arrayListNumbers.add(2);
+        arrayListNumbers.add(3);
+        // etcetera and etcetera.
+
+
+        ArrayList<String> arrayListStrings;
+
+        arrayListStrings = new ArrayList<>();
+        arrayListStrings.add("Hello");
+        arrayListStrings.add("World!");
+        arrayListStrings.add("Pants");
+        arrayListStrings.removeIf(s -> s.equals("Pants!"));
+        arrayListStrings.size();
+
+        HashMap<Integer, String> hashMapTest = null;
+
+        hashMapTest.put(11, "birthMonth");
+        hashMapTest.put(6, "birthDay");
+        hashMapTest.put(1986, "birthYear");
+        hashMapTest.get(11);
+
+        hashMapTest.get("birthMonth");
+
+
+        HashMap<String, Color> colors = new HashMap<>();
+
+        colors.put("red", new Color(255, 0, 0));
+        colors.put("purple", new Color(255, 0, 255));
+
+        colors.get("red").getRed();
+
+    }
+
+    public static double monteCarloPi() {
+        int side = 10;
+        int successes = 0;
+        int trials = 100000000;
+
+        for (int i = 0;i < trials;i++) {
+            double x = Math.random() * side;
+            double y = Math.random() * side;
+
+            double distance = Math.sqrt(x*x + y*y);
+
+            if (distance <= side) {
+                successes++;
+            }
+        }
+
+        return 4 * ((double)successes / trials);
+    }
+
+    public static double flipper() {
+        int successes = 0, tries = 1000000;
+
+        for (int i = 0;i < tries;i++) {
+            if (Math.random() >= .2 &&
+                Math.random() >= .2 &&
+                Math.random() >= .2) {
+                successes++;
+            }
+        }
+
+        return (double)successes / tries;
+    }
+
+    public static int cherokeeHare(int startingPopulation, double birthRate, int weeks) {
+        double population = startingPopulation;
+
+        for (int i = 0;i < weeks;i++) {
+            population = population * (1 + birthRate);
+        }
+
+        return (int)population;
+    }
+
+    // An alternative approach to the boost problem
+    // using ints.
+    public static int boostAlternative(int input) {
+        ArrayList<Integer> digits = new ArrayList<>();
+        int results = 0;
+
+        while (input > 0) {
+            int currentDigit = input % 10;
+
+            currentDigit = ++currentDigit % 10;
+
+            digits.add(currentDigit);
+
+            input /= 10;
+        }
+
+        for (int i = 0;i < digits.size();i++) {
+            int place = (int)Math.pow(10, i);
+
+            results += place * digits.get(i);
+        }
+
+
+        return results;
+    }
+
+    public static int boost(int input) {
+        String stringInput = String.valueOf(input);
+        String output = "";
+
+        for (int i = 0;i < stringInput.length();i++) {
+            String currentDigit = stringInput.substring(i, i + 1);
+            output += String.valueOf(
+                    (Integer.valueOf(currentDigit) + 1) % 10
+            );
+        }
+
+        return Integer.valueOf(output);
     }
 
     public static Color simpleBlend(Color[] colors) {

@@ -85,4 +85,35 @@ public class MainTest {
             })
         );
     }
+
+    @Test
+    public void boostProperlyIncrementsDigits() {
+        assertEquals(230, Main.boost(129));
+        assertEquals(50, Main.boost(49));
+        assertEquals(523, Main.boost(412));
+    }
+
+    @Test
+    public void boostAlternativeProperlyIncrementsDigits() {
+        assertEquals(230, Main.boostAlternative(129));
+        assertEquals(50, Main.boostAlternative(49));
+        assertEquals(523, Main.boostAlternative(412));
+    }
+
+    @Test
+    public void hoppityHopHopSimulator() {
+        assertEquals(241, Main.cherokeeHare(150, .10, 5));
+        assertEquals(2278, Main.cherokeeHare(300, .5, 5));
+    }
+
+    @Test
+    public void velmaFlipsPancakesGood() {
+        assertEquals(.8 * .8 * .8, Main.flipper(), .1);
+    }
+
+    @Test
+    public void monteCarloPiTest() {
+        System.out.println(Main.monteCarloPi());
+        assertEquals(3.14159, Main.monteCarloPi(), .002);
+    }
 }
