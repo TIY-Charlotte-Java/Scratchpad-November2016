@@ -113,7 +113,12 @@ public class MainTest {
 
     @Test
     public void monteCarloPiTest() {
-        System.out.println(Main.monteCarloPi());
-        assertEquals(3.14159, Main.monteCarloPi(), .002);
+        assertEquals(3.14159, Main.monteCarloPi(), .02);
+    }
+
+    @Test
+    public void weaverWeavesLettersIntoText() {
+        assertEquals("xbcxefx", Main.weave("abcdefg", 3));
+        assertEquals("xoxox", Main.weave("ooooo", 2));
     }
 }

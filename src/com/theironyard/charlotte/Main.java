@@ -56,10 +56,22 @@ public class Main {
 
     }
 
+    public static String weave(String input, int replaceKey) {
+        char[] characters = input.toCharArray();
+
+        for (int i = 0;i < characters.length;i++) {
+            if (i % replaceKey == 0) {
+                characters[i] = 'x';
+            }
+        }
+
+        return new String(characters);
+    }
+
     public static double monteCarloPi() {
         int side = 10;
         int successes = 0;
-        int trials = 100000000;
+        int trials = 1000000;
 
         for (int i = 0;i < trials;i++) {
             double x = Math.random() * side;
