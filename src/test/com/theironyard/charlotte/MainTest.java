@@ -121,4 +121,30 @@ public class MainTest {
         assertEquals("xbcxefx", Main.weave("abcdefg", 3));
         assertEquals("xoxox", Main.weave("ooooo", 2));
     }
+
+//    @Test
+//    public void findingNemo() {
+//        System.out.println(Main.nemo());
+//    }
+
+    @Test
+    public void fibonacciSequenceGeneratorGeneratesValidFibonacciArrays() {
+        assertArrayEquals(new int[] { 1, 1 }, Main.fibonacci(2));
+        assertArrayEquals(new int[] { 1, 1, 2, 3, 5, 8, 13 }, Main.fibonacci(7));
+        assertArrayEquals(new int[] { 1, 1, 2, 3, 5}, Main.fibonacci(5));
+        assertArrayEquals(new int[] { 1 }, Main.fibonacci(1));
+    }
+
+    @Test
+    public void climbClimbsAllTheThings() {
+        assertArrayEquals(new int[] { 5, 6, 8}, Main.climb(5, 3));
+        assertArrayEquals(new int[] { 8, 9, 11, 14, 18 }, Main.climb(8, 5));
+        assertArrayEquals(new int[] { 1, 2, 4, 7}, Main.climb(1, 4));
+    }
+
+    @Test
+    public void narcissisticNumbersAreNarcissistic() {
+        assertTrue(Main.isNarcissistic(153));
+        assertTrue(Main.isNarcissistic(1634));
+    }
 }

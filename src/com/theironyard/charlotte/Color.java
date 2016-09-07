@@ -27,7 +27,7 @@ public class Color {
     }
 
     public int getRed() {
-        return red;
+        return this.red;
     }
 
     public void setRed(int red) {

@@ -53,7 +53,86 @@ public class Main {
         colors.put("purple", new Color(255, 0, 255));
 
         colors.get("red").getRed();
+        colors.get("red").getBlue();
 
+        Color white = new Color(255, 255, 255);
+
+        white.getRed();
+    }
+
+    public static int[] climb(int number, int lengthOfArray) {
+        int[] results = new int[lengthOfArray];
+
+        for (int i = 0;i < lengthOfArray;i++) {
+            number += i;
+            results[i] = number;
+        }
+
+        return results;
+    }
+
+    public static boolean isNarcissistic(int number) {
+        String numberString = String.valueOf(number);
+        int numberLength = numberString.length();
+        int sum = 0;
+
+        for (int i = 0;i < numberLength;i++) {
+            int thisNumber = Integer.valueOf(numberString.substring(i, i + 1));
+
+            sum += Math.pow(thisNumber, numberLength);
+        }
+
+        return sum == number;
+    }
+
+    public static int[] fibonacci(int length) {
+        int[] results = new int[length];
+
+        IntIndexArrayFunction fibGenerator = (array, i) -> {
+            if (i < 2) {
+                return 1;
+            } else return array[i - 1] + array[i - 2];
+        };
+
+        for (int i = 0;i < length;i++) {
+            results[i] = fibGenerator.apply(results, i);
+        }
+
+        return results;
+    }
+
+    public static double nemo() {
+        int trials = 1000000;
+        int saveDays = 20;
+        int survivals = 0;
+        double fishRate = .80;
+        ArrayList<Integer> deathDays = new ArrayList<>();
+
+        for (int i = 0;i < trials;i++) {
+            int fish = 10;
+
+            for (int j = 0;j < saveDays;j++) {
+                if (fish == -1) {
+                    deathDays.add(j);
+                    break;
+                }
+
+                if (Math.random() > fishRate) {
+                    fish--;
+                }
+            }
+
+            if (fish >= 0) {
+                survivals++;
+            }
+        }
+
+        double averageDaysSurvived = deathDays.stream().collect(Collectors.averagingDouble(i -> i));
+        double standardDeviation = deathDays.stream().map(i -> Math.abs(averageDaysSurvived - i)).collect(Collectors.averagingDouble(i -> i));
+
+        System.out.printf("Average Death Day: %f. Standard Deviation: %f", averageDaysSurvived, standardDeviation);
+
+        return (double)survivals / trials;
     }
 
     public static String weave(String input, int replaceKey) {
