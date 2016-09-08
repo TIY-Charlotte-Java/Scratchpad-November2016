@@ -147,4 +147,17 @@ public class MainTest {
         assertTrue(Main.isNarcissistic(153));
         assertTrue(Main.isNarcissistic(1634));
     }
+
+    @Test
+    public void trainsCollideWithPeopleWhenTheyGoFaster() {
+        Movable train = new Movable();
+        train.speed = 100;
+        train.position = 0;
+
+        Movable person = new Movable();
+        person.speed = 10;
+        person.position = 200;
+
+        assertEquals(222, Main.movableThingsCrash(train, person));
+    }
 }

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4b28411-a75e-4650-8b4c-94a2a51876be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theironyard/charlotte/IntIndexArrayFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ScratchPad/com/theironyard/charlotte/Main.class" afterPath="$PROJECT_DIR$/out/production/ScratchPad/com/theironyard/charlotte/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/ScratchPad/com/theironyard/charlotte/MainTest.class" afterPath="$PROJECT_DIR$/out/test/ScratchPad/com/theironyard/charlotte/MainTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/theironyard/charlotte/Movable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/theironyard/charlotte/Color.java" afterPath="$PROJECT_DIR$/src/com/theironyard/charlotte/Color.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/theironyard/charlotte/Main.java" afterPath="$PROJECT_DIR$/src/com/theironyard/charlotte/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/theironyard/charlotte/MainTest.java" afterPath="$PROJECT_DIR$/src/test/com/theironyard/charlotte/MainTest.java" />
     </list>
@@ -34,15 +30,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/theironyard/charlotte/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="81" column="52" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="52" />
+            <state relative-caret-position="197">
+              <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#Main#0" expanded="false" />
-                <element signature="method#fibonacci#0;class#Main#0" expanded="false" />
-                <element signature="method#simpleBlend#0;class#Main#0" expanded="false" />
-                <element signature="method#titleCase#0;class#Main#0" expanded="false" />
-                <element signature="method#isPalindromeTwo#0;class#Main#0" expanded="false" />
+                <element signature="e#8917#8918#0" expanded="true" />
+                <element signature="e#8966#8967#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,8 +67,18 @@
       <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/com/theironyard/charlotte/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="146" column="35" selection-start-line="146" selection-start-column="35" selection-end-line="146" selection-end-column="35" />
+            <state relative-caret-position="226">
+              <caret line="160" column="41" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Movable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/theironyard/charlotte/Movable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -87,8 +90,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -122,6 +125,7 @@
         <option value="$PROJECT_DIR$/src/com/theironyard/charlotte/ArrayIntFunction.java" />
         <option value="$PROJECT_DIR$/src/com/theironyard/charlotte/IntIndexArrayFunction.java" />
         <option value="$PROJECT_DIR$/src/com/theironyard/charlotte/Color.java" />
+        <option value="$PROJECT_DIR$/src/com/theironyard/charlotte/Movable.java" />
         <option value="$PROJECT_DIR$/src/test/com/theironyard/charlotte/MainTest.java" />
         <option value="$PROJECT_DIR$/src/com/theironyard/charlotte/Main.java" />
       </list>
@@ -157,7 +161,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -189,14 +195,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="charlotte" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -218,8 +216,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -523,19 +519,19 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainTest - 2016.08.31 at 09h 42m 26s.xml">
-      <configuration name="MainTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest - 2016.08.31 at 09h 46m 06s.xml">
-      <configuration name="MainTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest - 2016.09.02 at 09h 43m 27s.xml">
-      <configuration name="MainTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest - 2016.09.02 at 09h 44m 04s.xml">
-      <configuration name="MainTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainTest - 2016.09.07 at 09h 31m 43s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2016.09.08 at 09h 48m 44s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2016.09.08 at 09h 48m 54s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2016.09.08 at 09h 57m 24s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2016.09.08 at 09h 58m 14s.xml">
       <configuration name="MainTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MainTest_findingNemo - 2016.08.30 at 09h 57m 42s.xml">
@@ -597,26 +593,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/theironyard/charlotte/Main.java</url>
-          <line>443</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/theironyard/charlotte/Main.java</url>
-          <line>342</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/theironyard/charlotte/Main.java</url>
-          <line>132</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager>
@@ -630,14 +606,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5820">
-          <caret line="440" column="25" selection-start-line="440" selection-start-column="25" selection-end-line="440" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/theironyard/charlotte/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -668,11 +636,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#fibonacci#0;class#Main#0" expanded="false" />
-            <element signature="method#simpleBlend#0;class#Main#0" expanded="false" />
-            <element signature="method#titleCase#0;class#Main#0" expanded="false" />
-            <element signature="method#isPalindromeTwo#0;class#Main#0" expanded="false" />
+            <element signature="e#8917#8918#0" expanded="true" />
+            <element signature="e#8966#8967#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -722,11 +687,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#fibonacci#0;class#Main#0" expanded="false" />
-            <element signature="method#simpleBlend#0;class#Main#0" expanded="false" />
-            <element signature="method#titleCase#0;class#Main#0" expanded="false" />
-            <element signature="method#isPalindromeTwo#0;class#Main#0" expanded="false" />
+            <element signature="e#8917#8918#0" expanded="true" />
+            <element signature="e#8966#8967#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -776,11 +738,8 @@
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#fibonacci#0;class#Main#0" expanded="false" />
-            <element signature="method#simpleBlend#0;class#Main#0" expanded="false" />
-            <element signature="method#titleCase#0;class#Main#0" expanded="false" />
-            <element signature="method#isPalindromeTwo#0;class#Main#0" expanded="false" />
+            <element signature="e#8917#8918#0" expanded="true" />
+            <element signature="e#8966#8967#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -830,11 +789,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#fibonacci#0;class#Main#0" expanded="false" />
-            <element signature="method#simpleBlend#0;class#Main#0" expanded="false" />
-            <element signature="method#titleCase#0;class#Main#0" expanded="false" />
-            <element signature="method#isPalindromeTwo#0;class#Main#0" expanded="false" />
+            <element signature="e#8917#8918#0" expanded="true" />
+            <element signature="e#8966#8967#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -861,11 +817,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#fibonacci#0;class#Main#0" expanded="false" />
-            <element signature="method#simpleBlend#0;class#Main#0" expanded="false" />
-            <element signature="method#titleCase#0;class#Main#0" expanded="false" />
-            <element signature="method#isPalindromeTwo#0;class#Main#0" expanded="false" />
+            <element signature="e#8917#8918#0" expanded="true" />
+            <element signature="e#8966#8967#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1048,23 +1001,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/theironyard/charlotte/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="146" column="35" selection-start-line="146" selection-start-column="35" selection-end-line="146" selection-end-column="35" />
+        <state relative-caret-position="226">
+          <caret line="160" column="41" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/theironyard/charlotte/Movable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/theironyard/charlotte/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="81" column="52" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="52" />
+        <state relative-caret-position="197">
+          <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#fibonacci#0;class#Main#0" expanded="false" />
-            <element signature="method#simpleBlend#0;class#Main#0" expanded="false" />
-            <element signature="method#titleCase#0;class#Main#0" expanded="false" />
-            <element signature="method#isPalindromeTwo#0;class#Main#0" expanded="false" />
+            <element signature="e#8917#8918#0" expanded="true" />
+            <element signature="e#8966#8967#0" expanded="true" />
           </folding>
         </state>
       </provider>

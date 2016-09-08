@@ -60,6 +60,31 @@ public class Main {
         white.getRed();
     }
 
+    public static int movableThingsCrash(Movable a, Movable b) {
+        // figure out which movable object came first (position-wise)
+        Movable first = a.position < b.position ? a  : b;
+        Movable second = a.position < b.position ? b : a;
+
+        // so if the first object is moving faster than the second,
+        if (first.speed > second.speed) {
+            // then we determine the relative velocity and relative position,
+            int relativeVelocity = first.speed - second.speed;
+            int distanceToTravel = second.position - first.position;
+
+            // get the time by dividing distance by velocity
+            double time = (double)distanceToTravel / relativeVelocity;
+
+            // multiply the time by the velocity and add the original position,
+            // return that added to the original position
+            return (int)(time * first.speed) + first.position;
+        }
+
+        // else return -1 to indicate they never collide
+        else {
+            return -1;
+        }
+    }
+
     public static int[] climb(int number, int lengthOfArray) {
         int[] results = new int[lengthOfArray];
 
