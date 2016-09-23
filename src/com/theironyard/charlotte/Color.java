@@ -1,7 +1,5 @@
 package com.theironyard.charlotte;
 
-import java.util.ArrayList;
-
 /**
  * Created by Ben on 8/23/16.
  */
@@ -60,7 +58,6 @@ public class Color {
         if (red != color.red) return false;
         if (green != color.green) return false;
         return blue == color.blue;
-
     }
 
     @Override
@@ -70,4 +67,13 @@ public class Color {
         result = 31 * result + blue;
         return result;
     }
+
+//    @Override
+//    public String toString() {
+//        return "Color{" +
+//                "red=" + red +
+//                ", green=" + green +
+//                ", blue=" + blue +
+//                '}';
+//    }
 }

@@ -3,10 +3,77 @@ package com.theironyard.charlotte;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class Main {
     public String name = "Ben";
+
+
+
+
+
+
+    public static String reverseHalfInts(String input) {
+        int[] characters = input.chars().toArray();
+
+        for (int i = 0;i < characters.length / 2;i++) {
+            int otherIdx = characters.length - 1 - i;
+
+            // trying to swap a = 7, b = 3
+
+            // a = a + b // => a = 10, b = 3
+            // b = a - b // => a = 10, b = 7
+            // a = a - b // => a = 3, b = 7
+            characters[i] = characters[otherIdx] + characters[i];
+            characters[otherIdx] = characters[i] - characters[otherIdx];
+            characters[i] = characters[i] - characters[otherIdx];
+        }
+
+        char[] chars = new char[characters.length];
+
+        for (int i = 0;i < chars.length;i++) {
+            chars[i] = (char)characters[i];
+        }
+
+        return new String(chars);
+    }
+
+    public static String reverseHalf(String input) {
+        char[] characters = input.toCharArray();
+
+        for (int i = 0;i < characters.length / 2;i++) {
+            int otherIdx = characters.length - 1 - i;
+
+            char temp = characters[i];
+
+            characters[i] = characters[otherIdx];
+            characters[otherIdx] = temp;
+        }
+
+        return new String(characters);
+    }
+
+    public static String reverse(String input) {
+        StringBuilder sb = new StringBuilder();
+
+        for(int i = input.length() - 1;i >= 0;i--) {
+            sb.append(input.charAt(i));
+        }
+
+        return sb.toString();
+    }
+
+    public static Color heat(int heatPercentage) throws Exception {
+        if (heatPercentage < 0 || heatPercentage > 100) {
+            throw new Exception("heatPercentage must be 0 - 100 inclusive");
+        }
+
+        double percentage = heatPercentage / 100.0;
+
+        return new Color((int)(percentage * 255), 0, (int)((1.00 - percentage) * 255));
+    }
 
     public static void main(String[] args) {
         int[] numbers;
@@ -60,9 +127,82 @@ public class Main {
         white.getRed();
     }
 
+//    public static List<Table> organizer() throws FileNotFoundException{
+////        Type listType = new TypeToken<ArrayList<Attendee>>(){}.getType();
+//        File f = new File("people.json");
+//        Scanner fileScanner = new Scanner(f);
+//        fileScanner.useDelimiter("\\Z");
+//
+//        Gson gson = new Gson();
+//
+//        List<Attendee> attendees = gson.fromJson(fileScanner.next(), AttendeeArrayList.class);
+//
+//        attendees.sort((a, b) -> a.getFoodChoice().hashCode() - b.getFoodChoice().hashCode());
+//
+//        List<Table> results = new ArrayList<>();
+//
+//        for (Attendee a : attendees) {
+//            Table lastTable;
+//
+//            if (results.size() > 0) {
+//                lastTable = results.get(results.size() - 1);
+//            } else {
+//                lastTable = new Table();
+//                results.add(lastTable);
+//            }
+//
+//
+//
+//        }
+//    }
+
+    public static int desirable(String input) {
+        char[] charString = input.toCharArray();
+        int desirables = 0;
+
+        // for each character in the array:
+        for (int i = 0;i < charString.length;i++) {
+            // if the character is an "H":
+            if (charString[i] == 'H') {
+                // iterate from index - 2 through index + 2
+                for (int j = 1;j <= 2;j++) {
+                    // and increment desirables if any character
+                    // at that index is R
+
+                    if (i - j >= 0) {
+                        if (charString[i - j] == 'R') {
+                            desirables++;
+                            break;
+                        }
+                    }
+
+                    if (i + j < charString.length) {
+                        if (charString[i + j] == 'R') {
+                            desirables++;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        return desirables;
+    }
+
+    public static int rosebud(String input) {
+        Pattern p = Pattern.compile("rosebud(!*)1", Pattern.CASE_INSENSITIVE);
+        Matcher m = p.matcher(input);
+
+        if (m.matches()) {
+            return m.group(1).length();
+        } else {
+            return 0;
+        }
+    }
+
     public static int movableThingsCrash(Movable a, Movable b) {
         // figure out which movable object came first (position-wise)
-        Movable first = a.position < b.position ? a  : b;
+        Movable first  = a.position < b.position ? a : b;
         Movable second = a.position < b.position ? b : a;
 
         // so if the first object is moving faster than the second,

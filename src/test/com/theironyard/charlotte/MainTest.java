@@ -160,4 +160,48 @@ public class MainTest {
 
         assertEquals(222, Main.movableThingsCrash(train, person));
     }
+
+    @Test
+    public void roseBudCheatCalculator() {
+        assertEquals(4, Main.rosebud("rosebud!!!!1"));
+        assertEquals(1, Main.rosebud("rosebud!1"));
+        assertEquals(0, Main.rosebud("rosebud1"));
+    }
+
+    @Test
+    public void desirableHomesTest() {
+        assertEquals(2, Main.desirable("RHHHH")); // returns 2
+        assertEquals(3, Main.desirable("RHHHR")); // returns 3
+        assertEquals(10, Main.desirable("RHRHRHRHRHRHRHRHRHRH"));
+        assertEquals(10, Main.desirable("RHHHRHHHRHHHRH"));
+        assertEquals(12, Main.desirable("HHHHHHHHHHHHHHRHHHRHHHRHHHRH"));
+    }
+
+    @Test
+    public void heatColorsTest() throws Exception {
+        assertEquals(new Color(0,   0, 255),   Main.heat(0));
+        assertEquals(new Color(127, 0, 127),   Main.heat(50));
+        assertEquals(new Color(255, 0, 0),     Main.heat(100));
+    }
+
+    @Test
+    public void reverseTest() {
+        assertEquals("neb",     Main.reverse("ben"));
+        assertEquals("yesdnil", Main.reverse("lindsey"));
+        assertEquals("ekim",    Main.reverse("mike"));
+    }
+
+    @Test
+    public void reverseHalfTest() {
+        assertEquals("neb",     Main.reverseHalf("ben"));
+        assertEquals("yesdnil", Main.reverseHalf("lindsey"));
+        assertEquals("ekim",    Main.reverseHalf("mike"));
+    }
+
+    @Test
+    public void reverseHalfIntsTest() {
+        assertEquals("neb",     Main.reverseHalfInts("ben"));
+        assertEquals("yesdnil", Main.reverseHalfInts("lindsey"));
+        assertEquals("ekim",    Main.reverseHalfInts("mike"));
+    }
 }
